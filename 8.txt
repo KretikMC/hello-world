@@ -1,0 +1,140 @@
+1:
+
+
+// Переводит количество байтов в килобайты
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b;
+	cout << "Кол-во байтов: ";
+	cin >> a;
+	if (a < 0)
+	{
+	    cout << "Так нельзя!!!";
+	    return 0;
+	}
+	b = ((a - 1) / 1024) + 1;
+	cout << "Кол-во килобайтов: " << b;
+}
+
+
+2:
+
+
+// Находит количество отрезков B, размещенных на отрезке A
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b, c;
+	cout << "A = ";
+	cin >> a;
+	cout << "B = ";
+	cin >> b;
+	if ((a <= 0) or (b <= 0) or (a < b))
+	{
+		cout << "Неверные значения!!!";
+		return 0;
+	}
+	c = a / b;
+	cout << "Кол-во отрезков = " << c;
+}
+
+
+3:
+
+
+// Находит длину незанятой отрезками B части отрезка A
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "A = ";
+	cin >> a;
+	cout << "B = ";
+	cin >> b;
+	if ((a <= 0) or (b <= 0) or (a < b))
+	{
+		cout << "Неверные значения!!!";
+		return 0;
+	}
+	c = a / b;
+	d = a - (b * c);
+	cout << "Длина незанятой части A = " << d;
+}
+
+
+4:
+
+
+// Выводит число, полученное при перестановке цифр исходного двухзначного числа.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "Введите двухзначное число: ";
+	cin >> a;
+	if ((a < 10) or (a > 99))
+	{
+		cout << "Неверное значение!!!";
+		return 0;
+	}
+	b = a / 10;
+	c = a % 10;
+	d = c * 10 + b;
+	cout << "Новое число: " << d;
+}
+
+
+5:
+
+
+// Выводит трехзначное число, у которого зачеркнули первую слева цифру и приписали ее справа
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "Введите трехзначное число: ";
+	cin >> a;
+	if ((a < 100) or (a > 999))
+	{
+		cout << "Неверное значение!!!";
+		return 0;
+	}
+	b = a / 100;
+	c = a % 100;
+	d = c * 10 + b;
+	cout << "Новое число: " << d;
+}
+
+
+
