@@ -1,0 +1,642 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b;
+	cout << "Число: ";
+	cin >> a;
+	cout << "Месяц: ";
+	cin >> b;
+	if ((a < 1) or (a > 31))
+	{
+	    cout << "Неверное значение!!!";
+	    return 0;
+	}
+	if ((b < 1) or (b > 12))
+	{
+	    cout << "Неверное значение!!!";
+	    return 0;
+	}
+	if ((a == 31) and (b % 2 == 1))
+	{
+	    cout << "Неверное значение!!!";
+	    return 0;
+	}
+	if ((a > 29) and (b == 2))
+	{
+	    cout << "Неверное значение!!!";
+	    return 0;
+	}
+	if (a == 1)
+	{
+	    cout << "Ваш день - первое ";
+	}
+	if (a == 2)
+	{
+	    cout << "Ваш день - второе ";
+	}
+	if (a == 3)
+	{
+	    cout << "Ваш день - третье ";
+	}
+	if (a == 4)
+	{
+	    cout << "Ваш день - четвертое ";
+	}
+	if (a == 5)
+	{
+	    cout << "Ваш день - пятое ";
+	}
+	if (a == 6)
+	{
+	    cout << "Ваш день - шестое ";
+	}
+	if (a == 7)
+	{
+	    cout << "Ваш день - седьмое ";
+	}
+	if (a == 8)
+	{
+	    cout << "Ваш день - восьмое ";
+	}
+	if (a == 9)
+	{
+	    cout << "Ваш день - девятое ";
+	}
+	if (a == 10)
+	{
+	    cout << "Ваш день - десятое ";
+	}
+	if (a == 11)
+	{
+	    cout << "Ваш день - одиннадцатое ";
+	}
+	if (a == 12)
+	{
+	    cout << "Ваш день - двенадцатое ";
+	}
+	if (a == 13)
+	{
+	    cout << "Ваш день - тренадцатое ";
+	}
+	if (a == 14)
+	{
+	    cout << "Ваш день - четырнадцатое ";
+	}
+	if (a == 15)
+	{
+	    cout << "Ваш день - пятнядцатое ";
+	}
+	if (a == 16)
+	{
+	    cout << "Ваш день - шестнадцатое ";
+	}
+	if (a == 17)
+	{
+	    cout << "Ваш день - семнадцатое ";
+	}
+	if (a == 18)
+	{
+	    cout << "Ваш день - восемнадцатое ";
+	}
+	if (a == 19)
+	{
+	    cout << "Ваш день - девятнадцатое ";
+	}
+	if (a == 20)
+	{
+	    cout << "Ваш день - двадцатое ";
+	}
+	if (a == 21)
+	{
+	    cout << "Ваш день - двадцать первое ";
+	}
+	if (a == 22)
+	{
+	    cout << "Ваш день - двадцать второе ";
+	}
+	if (a == 23)
+	{
+	    cout << "Ваш день - двадцать третье ";
+	}
+	if (a == 24)
+	{
+	    cout << "Ваш день - двадцать четвертое ";
+	}
+	if (a == 25)
+	{
+	    cout << "Ваш день - двадцать пятое ";
+	}
+	if (a == 26)
+	{
+	    cout << "Ваш день - двадцать шестое ";
+	}
+	if (a == 27)
+	{
+	    cout << "Ваш день - двадцать седьмое ";
+	}
+	if (a == 28)
+	{
+	    cout << "Ваш день - двадцать восьмое ";
+	}
+	if (a == 29)
+	{
+	    cout << "Ваш день - двадцать девятое ";
+	}
+	if (a == 30)
+	{
+	    cout << "Ваш день - тридцатое ";
+	}
+	if (a == 31)
+	{
+	    cout << "Ваш день - тридцать первое ";
+	}
+	if (b == 1)
+	{
+	    cout << "января";
+	    return 0;
+	}
+	if (b == 2)
+	{
+	    cout << "февраля";
+	    return 0;
+	}
+	if (b == 3)
+	{
+	    cout << "марта";
+	    return 0;
+	}
+	if (b == 4)
+	{
+	    cout << "апреля";
+	    return 0;
+	}
+	if (b == 5)
+	{
+	    cout << "мая";
+	    return 0;
+	}
+	if (b == 6)
+	{
+	    cout << "июня";
+	    return 0;
+	}
+	if (b == 7)
+	{
+	    cout << "июля";
+	    return 0;
+	}
+	if (b == 8)
+	{
+	    cout << "августа";
+	    return 0;
+	}
+	if (b == 9)
+	{
+	    cout << "сентября";
+	    return 0;
+	}
+	if (b == 10)
+	{
+	    cout << "октября";
+	    return 0;
+	}
+	if (b == 11)
+	{
+	    cout << "ноября";
+	    return 0;
+	}
+	if (b == 12)
+	{
+	    cout << "декабря";
+	    return 0;
+	}
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n;
+    char c;
+    cout << "Direction:";
+    cin >> c;
+    cout << "Operation:";
+    cin >> n;
+    switch (c) {
+        case 'N':
+            switch (n) {
+                case 1:
+                    c='W';
+                    break;
+                case 0:
+                    c='N';
+                    break;
+                case -1:
+                    c='E';
+                    break;
+                }
+            break;
+        case 'E':
+            switch (n) {
+                case 1:
+                    c='N';
+                    break;
+                case 0:
+                    c='E';
+                    break;
+                case -1:
+                    c='S';
+                    break;
+                }
+        case 'S':
+            switch (n) {
+                case 1:
+                    c='E';
+                    break;
+                case 0:
+                    c='S';
+                    break;
+                case -1:
+                    c='W';
+                    break;
+            }
+            break;
+        case 'W':
+            switch (n) {
+                case 1:
+                    c='S';
+                    break;
+                case 0:
+                    c='W';
+                    break;
+                case -1:
+                    c='N';
+                    break;
+            }
+    }
+    cout << c;
+    return 0;
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n;
+    cout<<"кол-во:";
+    cin>>n;
+ 
+    if (n / 10 == 1)
+        switch (n) {
+        case 10:
+            cout<<"десять учебных заданий.";
+            break;
+        case 11:
+            cout << "одинадцать учебных заданий.";
+            break;
+        case 12:
+            cout << "двенадцать учебных заданий.";
+            break;
+        case 13:
+            cout << "тринадцать учебных заданий.";
+            break;
+        case 14:
+            cout << "четырнадцать учебных заданий.";
+            break;
+        case 15:
+            cout << "пятнадцать учебных заданий.";
+            break;
+        case 16:
+            cout << "шестнадцать учебных заданий.";
+            break;
+        case 17:
+            cout << "семнадцать учебных заданий.";
+            break;
+        case 18:
+            cout << "восемнадцать учебных заданий.";
+            break;
+        case 19:
+            cout << "девятнадцать учебных заданий.";
+            break;
+        }
+    else {
+        switch (n / 10) {
+        case 2:
+            cout << "двадцать ";
+            break;
+        case 3:
+            cout << "тридцать ";
+            break;
+        case 4:
+            cout << "сорок ";
+            break;
+        }
+ 
+        switch (n % 10) {
+        case 1:
+            cout << "одно ";
+            break;
+        case 2:
+            cout << "два ";
+            break;
+        case 3:
+            cout << "три ";
+            break;
+        case 4:
+            cout << "четыре ";
+            break;
+        case 5:
+            cout << "пять ";
+            break;
+        case 6:
+            cout << "шесть ";
+            break;
+        case 7:
+            cout << "семь ";
+            break;
+        case 8:
+            cout << "восемь ";
+            break;
+        case 9:
+            cout << "девять ";
+            break;
+        }
+ 
+        switch (n % 10) {
+        case 0:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            cout << "учебных заданий.";
+            break;
+        case 1:
+            cout << "учебное задание.";
+            break;
+        case 2:
+        case 3:
+        case 4:
+            cout << "учебных задания.";
+            break;
+        }
+    }
+    return 0;
+}
+
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n;
+    cout << "Число:";
+    cin>>n;
+ 
+    switch (n / 100) {
+    case 1:
+        cout << "сто ";
+        break;
+    case 2:
+        cout << "двести ";
+        break;
+    case 3:
+        cout << "триста ";
+        break;
+    case 4:
+        cout << "четыреста ";
+        break;
+    case 5:
+        cout << "пятьсот ";
+        break;
+    case 6:
+        cout << "шестьсот ";
+        break;
+    case 7:
+        cout << "семьсот ";
+        break;
+    case 8:
+        cout << "восемьсот  ";
+        break;
+    case 9:
+        cout << "девятьсот  ";
+        break;
+    }
+ 
+    if ((n % 100) / 10 == 1)
+        switch (n % 100) {
+        case 10:
+            cout << "десять";
+            break;
+        case 11:
+            cout << "одинадцать";
+            break;
+        case 12:
+            cout << "двенадцать";
+            break;
+        case 13:
+            cout << "тринадцать";
+            break;
+        case 14:
+            cout << "четырнадцать";
+            break;
+        case 15:
+            cout << "пятнадцать";
+            break;
+        case 16:
+            cout << "шестнадцать";
+            break;
+        case 17:
+            cout << "семнадцать";
+            break;
+        case 18:
+            cout << "восемнадцать";
+            break;
+        case 19:
+            cout << "девятнадцать";
+            break;
+        }
+    else {
+        switch ((n % 100) / 10) {
+        case 2:
+            cout << "двадцать ";
+            break;
+        case 3:
+            cout << "тридцать ";
+            break;
+        case 4:
+            cout << "сорок ";
+            break;
+        case 5:
+            cout << "пятьдесят ";
+            break;
+        case 6:
+            cout << "шестьдесят ";
+            break;
+        case 7:
+            cout << "семьдесят ";
+            break;
+        case 8:
+            cout << "восемьдесят ";
+            break;
+        case 9:
+            cout << "девяносто ";
+            break;
+        }
+ 
+        switch (n % 10) {
+        case 1:
+            cout << "один";
+            break;
+        case 2:
+            cout << "два";
+            break;
+        case 3:
+            cout << "три";
+            break;
+        case 4:
+            cout << "четыре";
+            break;
+        case 5:
+            cout << "пять";
+            break;
+        case 6:
+            cout << "шесть";
+            break;
+        case 7:
+            cout << "семь";
+            break;
+        case 8:
+            cout << "восемь";
+            break;
+        case 9:
+            cout<<"девять";
+            break;
+        }
+    }
+    return 0;
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n;
+    cout << "Год:";
+    cin>>n;
+ 
+    cout << "год ";
+ 
+    switch ((n) % 10) {
+    case 0:
+    case 1:
+        cout << "бел";
+        break;
+    case 2:
+    case 3:
+        cout << "черн";
+        break;
+    case 4:
+    case 5:
+        cout << "зелён";
+        break;
+    case 6:
+    case 7:
+        cout << "красн";
+        break;
+    case 8:
+    case 9:
+        cout << "жёлт";
+        break;
+    }
+ 
+    switch ((n + 1) % 5) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 9:
+    case 10:
+    case 11:
+        cout << "ой ";
+        break;
+    case 6:
+    case 7:
+    case 8:
+        cout << "ого ";
+        break;
+    }
+ 
+    switch ((n + 8) % 12) {
+    case 0:
+        cout << "крысы";
+        break;
+    case 1:
+        cout << "коровы";
+        break;
+    case 2:
+        cout << "тигра";
+        break;
+    case 3:
+        cout << "зайца";
+        break;
+    case 4:
+        cout << "дракона";
+        break;
+    case 5:
+        cout << "змеи";
+        break;
+    case 6:
+        cout << "лошади";
+        break;
+    case 7:
+        cout << "овцы";
+        break;
+    case 8:
+        cout << "обезьяны";
+        break;
+    case 9:
+        cout << "курицы";
+        break;
+    case 10:
+        cout << "собаки";
+        break;
+    case 11:
+        cout<<"свиньи";
+        break;
+    }
+ 
+    return 0;
+}
