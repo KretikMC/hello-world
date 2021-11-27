@@ -1,0 +1,147 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int a, b, i, i2;
+    cout<<"A:";
+    cin>>a;
+    cout << "B:";
+    cin >> b;
+    for (i = a; i <= b; ++i) 
+    {
+        for (i2 = 1; i2 <= i; ++i2)
+        {
+            cout << i <<" ";
+        }
+        cout << '\n';
+    }
+    return 0;
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    setlocale(LC_ALL, "Rus");
+    int a, b;
+    cout<<"A:";
+    cin>>a;
+    cout<<"B:";
+    cin>>b;
+    int temp = a;
+    while (temp >= 0) 
+    {
+        temp -= b;
+    }
+    cout<< temp + b;
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    setlocale(LC_ALL, "Rus");
+    int N, K = 0, S = 0;
+    cout << "Введите целое число N (>1): ";
+    cin >> N;
+    while(S <= N) 
+    {
+     ++K;
+     S += K;   
+    }
+    cout << "Наименьшее из целых чисел K, для которых сумма 1 + 2 + ... + K будет больше или равна N:   " << "K= " << K << endl;
+    return 0;
+}
+
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    float p;
+    cout << "P:";
+    cin >> p;
+    int k = 1;
+    float s = 1000;
+    while (s <= 1100) 
+    {
+        ++k;
+        s += s * p / 100;
+    }
+    cout<<"k:"<<k<<endl<<"nS:"<< s;
+    return 0;
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int a, b;
+    cout << "A:";
+    cin >> a;
+    cout << "B:";
+    cin >> b;
+    while ((a != 0) & (b != 0)) 
+    {
+        if (a > b) a = a % b;
+        else b = b % a;
+    }
+    cout<< a + b;
+    return 0;
+}
+
+6:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int fib(int n){
+    int f = 0;
+    int res = 1;
+    int f0 = 1;
+    int i = 0;
+    while (i <= n)
+    {
+        res = f;
+        f = f0 + f;
+        f0 = res;
+        i++;
+        if (n == f)
+            return i;
+    }
+    if (n == 0)
+    {
+        return 0;
+    }
+    else 
+    {
+        cout << "Неверное значение!";
+        return 0;
+    }
+}
+int main(){
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cout << "N = ";
+    cin >> n;
+    cout << "K = " << fib(n);
+    return 0;
+}
