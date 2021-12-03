@@ -1,0 +1,228 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	if (a > b)
+	{
+	    b = a;
+	    cout << "b = " << b << '\n' << "a = " << a;
+	    return 0;
+	}
+	if (b > a)
+	{
+	    a = b;
+	    cout << "b = " << b << '\n' << "a = " << a;
+	    return 0;
+	}
+	else
+	{
+	    a = 0;
+	    b = 0;
+	    cout << "b = " << b << '\n' << "a = " << a;
+	    return 0;
+	}
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b, c;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << "c = ";
+	cin >> c;
+	if ((b >= a) and (c >= a))
+	{
+	    cout << "Сумма = " << b + c;
+	    return 0;
+	}
+	if ((a >= b) and (c >= b))
+	{
+	    cout << "Сумма = " << a + c;
+	    return 0;
+	}
+	if ((a >= c) and (b >= c))
+	{
+	    cout << "Сумма = " << a + b;
+	    return 0;
+	}
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int ax, bx, cx, ay, by, cy;
+	cout << "a(x) = ";
+	cin >> ax;
+	cout << "a(y) = ";
+	cin >> ay;
+	cout << "b(x) = ";
+	cin >> bx;
+	cout << "b(y) = ";
+	cin >> by;
+	cout << "c(x) = ";
+	cin >> cx;
+	cout << "c(y) = ";
+	cin >> cy;
+	if (abs(sqrt((ax - bx) * (ax - bx)) + sqrt((ay - by) * (ay - by))) < abs(sqrt((ax - cx) * (ax - cx)) + sqrt((ay - cy) * (ay - cy))))
+	{
+	    cout << "Точка B ближе и находится на расстоянии " << abs(sqrt((ax - bx) * (ax - bx)) + sqrt((ay - by) * (ay - by)));
+	    return 0;
+	}
+	if (abs(sqrt((ax - bx) * (ax - bx)) + sqrt((ay - by) * (ay - by))) > abs(sqrt((ax - cx) * (ax - cx)) + sqrt((ay - cy) * (ay - cy))))
+	{
+	    cout << "Точка C ближе и находится на расстоянии " << abs(sqrt((ax - cx) * (ax - cx)) + sqrt((ay - cy) * (ay - cy)));
+	    return 0;
+	}
+	if (abs(sqrt((ax - bx) * (ax - bx)) + sqrt((ay - by) * (ay - by))) == abs(sqrt((ax - cx) * (ax - cx)) + sqrt((ay - cy) * (ay - cy))))
+	{
+	    cout << "Расстояния равны";
+	    return 0;
+	}
+}
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int X, Y;
+	cout << "X = ";
+	cin >> X;
+	cout << "Y = ";
+	cin >> Y;
+	if ((X>0) and (Y>0))
+	{
+	    cout << "Точка лежит в I координатной четверти";
+	    return 0;
+	}
+	if ((X<0) and (Y>0))
+	{
+	    cout << "Точка лежит в II координатной четверти";
+	    return 0;
+	}
+	if ((X<0) and (Y<0))
+	{
+	    cout << "Точка лежит в III координатной четверти";
+	    return 0;
+	}
+	if ((X>0) and (Y<0))
+	{
+	    cout << "Точка лежит в IV координатной четверти";
+	    return 0;
+	}
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a;
+	cout << "Ваше число: ";
+	cin >> a;
+	cout << "Ваше число является ";
+	if (a == 0)
+	{
+	    cout << "нулевым";
+	    return 0;
+	}
+	if (a > 0)
+	{
+	    cout << "положительным ";
+	}
+	if (a < 0)
+	{
+	    cout << "отрицательным ";
+	}
+	if (a % 2 == 0)
+	{
+	    cout << "четным. ";
+	    return 0;
+	}
+	if (a % 2 == 1)
+	{
+	    cout << "нечетным. ";
+	    return 0;
+	}
+}
+
+6:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a;
+	cout << "Ваше число: ";
+	cin >> a;
+	if ((a < 1) or (a > 999))
+	{
+	  	    cout << "Неверное значение!!!";
+	    return 0;  
+	}
+	cout << "Ваше число является ";
+	if (a % 2 == 0)
+	{
+	    cout << "четным ";
+	}
+	if (a % 2 == 1)
+	{
+	    cout << "нечетным ";
+	}
+	if (a < 10)
+	{
+	    cout << "однозначным. ";
+	    return 0;
+	}
+	if ((a > 9) and (a < 100))
+	{
+	    cout << "двухзначным. ";
+	    return 0;
+	}
+	if (a > 99)
+	{
+	    cout << "трехзначным. ";
+	    return 0;
+	}
+}

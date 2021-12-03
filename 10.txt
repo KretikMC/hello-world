@@ -1,0 +1,221 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	if ((a > 2) and (b <= 3))
+	{
+	    cout << "Все верно!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Высказывание ложно!";
+	    return 0;
+	}
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int a, b, c;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << "c = ";
+	cin >> c;
+	if ((a < b) and (b < c))
+	{
+	    cout << "Все верно!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Выражение A<B<C неверное!";
+	    return 0;
+	}
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a;
+	cout << "Ваше число = ";
+	cin >> a;
+	if (a < 1)
+	{
+	    cout << "Значение неверное!";
+	    return 0;
+	}
+	if ((a > 9) and (a < 100) and (a % 2 == 0))
+	{
+	    cout << "Ваше число - четное двухзначное!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Число не является четным двухзнвчным!";
+	    return 0;
+	}
+}
+
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "Ваше число = ";
+	cin >> a;
+	b = a / 100;
+	c = (a - (b * 100)) / 10;
+	d = a - (b * 100) - (c * 10);
+	if ((a < 100) or (a > 999))
+	{
+	    cout << "Ваеш число не трехзначное!";
+	    return 0;
+	}
+	if (((b < c) and (c < d)) or ((b > c) and (c > d)))
+	{
+	    cout << "Ваше число образует последовательность!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Ваше число не образует последовательность!";
+	    return 0;
+	}
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b, c, d, e;
+	cout << "Ваше число = ";
+	cin >> a;
+	b = a / 1000;
+	c = (a - (b * 1000)) / 100;
+	d = (a - (b * 1000) - (c * 100)) / 10;
+	e = (a - (b * 1000) -(c * 100) - (d * 10));
+	if ((a < 1000) or (a > 9999))
+	{
+	    cout << "Ваше число не четырехзначное!";
+	    return 0;
+	}
+	if ((b == e) and (c == d))
+	{
+	    cout << "Ваше число читается одинаково с двух сторон!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Ваше число не читается одинаково с двух сторон!";
+	    return 0;
+	}
+}
+
+6:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << "c = ";
+	cin >> c;
+	if ((a < 1) or (b < 1) or (c < 1))
+	{
+	    cout << "Стороны не могут быть меньше или равны 0!";
+	    return 0;
+	}
+	if ((c * c) == (a * a) + (b * b))
+	{
+	    cout << "Ваш треугольник - прямоугольный!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Ваш треугольник - не прямоугольный!";
+	    return 0;
+	}
+}
+
+7:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int a, b, c, d;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << "c = ";
+	cin >> c;
+	if ((a < 1) or (b < 1) or (c < 1))
+	{
+	    cout << "Стороны не могут быть меньше или равны 0!";
+	    return 0;
+	}
+	if ((c < a + b) and (b < a + c) and (a < b + c))
+	{
+	    cout << "Ваш треугольник существует!";
+	    return 0;
+	}
+	else
+	{
+	    cout << "Такого треугольника не существует!";
+	    return 0;
+	}
+}
+
