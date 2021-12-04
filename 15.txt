@@ -1,0 +1,159 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void PowerA3(float a, float b)
+{
+    cout << "Введите A: ";
+    cin >> a;
+    b = a * a * a;
+    cout << "B = " << b << endl;
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	float i, a, b;
+	for (i = 1; i <= 5; ++i)
+	{
+	    PowerA3(a, b);
+	}
+	return 0;
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int Sign(float x)
+{
+    if (x < 0)
+    {
+        return -1;
+    }
+      if (x == 0)
+    {
+        return 0;
+    }
+    if (x > 0)
+    {
+        return 1;
+    }
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	float i, a, b;
+	cout << "A = ";
+	cin >> a;
+	cout << "B = ";
+	cin >> b;
+	i = (Sign(a) + Sign(b));
+	cout << "Сумма чисел = " << i;
+	return 0;
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void RingS(float r1, float r2)
+{
+    cout << "Введите первый радиус: ";
+    cin >> r1;
+    cout << "Введите второй радиус: ";
+    cin >> r2;
+    if (r2 > r1)
+    {
+        cout << "R1 должен быть больше R2!!!" << endl;
+        return;
+    }
+    r1 = 3.14 * r1 * r1;
+    r2 = 3.14 * r2 * r2;
+    r1 -= r2;
+    cout << "Площадь кольца = " << r1 << endl;
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	float i, a, b;
+	for (i = 1; i <= 3; ++i)
+	{
+	    RingS(a, b);
+	}
+	return 0;
+}
+
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int Quarter(int X, int Y)
+{
+    cout << "X = ";
+	cin >> X;
+	cout << "Y = ";
+	cin >> Y;
+	if ((X>0) and (Y>0))
+	{
+	    cout << "Точка лежит в I координатной четверти" << endl;
+	    return;
+	}
+	if ((X<0) and (Y>0))
+	{
+	    cout << "Точка лежит в II координатной четверти" << endl;
+	    return;
+	}
+	if ((X<0) and (Y<0))
+	{
+	    cout << "Точка лежит в III координатной четверти" << endl;
+	    return;
+	}
+	if ((X>0) and (Y<0))
+	{
+	    cout << "Точка лежит в IV координатной четверти" << endl;
+	    return;
+	}
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	int i, X, Y;
+	for (i = 1; i <= 3; ++i)
+	{
+	    Quarter(X, Y);
+	}
+	return 0;
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float Fact2(int n)
+{
+    int temp = 1;
+    for (; n>0; n-=2)
+    {
+        temp *= n;
+    }
+    return temp;
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+	float i, n;
+	cout << "N = ";
+	cin >> n;
+	cout << "Двойной факториал = " << Fact2(n);
+	return 0;
+}
