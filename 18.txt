@@ -150,7 +150,6 @@ int main()
             for (i = imin + 1; i < imax; ++i)
             {
                 a[i] = 0;
-                cout << "a[" << i << "] = " << a[i] << endl;
             }
         }
         if (imin > imax)
@@ -158,7 +157,6 @@ int main()
             for (i = imax + 1; i < imin; ++i)
             {
                 a[i] = 0;
-                cout << "a[" << i << "] = " << a[i] << endl;
             }
         }
     }
