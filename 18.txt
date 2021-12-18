@@ -54,7 +54,6 @@ int main()
     cin >> n;
     int a[n];
     int b[n];
-    avrg = 0;
     for (i = 1; i <= n; ++i)
     {
         cout << "a[" << i << "] = ";
@@ -62,6 +61,7 @@ int main()
     }
     for (k = 1; k <= n; ++k)
     {
+        avrg = 0;
         for (i = 1; i <= k; ++i)
         {
            avrg += a[i];
