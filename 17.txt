@@ -29,7 +29,6 @@ int main()
     for (i = k; i <= l; ++i)
     {
         avrg += arr[i];
-        cout << avrg << endl;
     }
     avrg = avrg / (l-k+1);
     cout << "Среднее значение = " << avrg;
