@@ -1,0 +1,173 @@
+1:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, k, l, avrg;
+    avrg = 0;
+    cout << "Введите N: ";
+    cin >> n;
+    cout << "Введите K: ";
+    cin >> k;
+    cout << "Введите L: ";
+    cin >> l;
+    if (not((k >= 1) and (l >= k) and (n >= l)))
+    {
+        cout << "Значения должны быть такими, чтобы 1 ≤ K ≤ L ≤ N!!!";
+    }
+    int arr[n];
+    for (i = 1; i <= n; ++i)
+    {
+        cout << "a[" << i << "] = ";
+        cin >> arr[i];
+    }
+    for (i = k; i <= l; ++i)
+    {
+        avrg += arr[i];
+        cout << avrg << endl;
+    }
+    avrg = avrg / (l-k+1);
+    cout << "Среднее значение = " << avrg;
+}
+
+2:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, i2, d;
+    cout << "Введите N: ";
+    cin >> n;
+    int arr[n];
+    for (i = 1; i <= n; ++i)
+    {
+        cout << "a[" << i << "] = ";
+        cin >> arr[i];
+    }
+    for (i = 1; i <= n - 1; ++i)
+    {
+        for (i2 = i+1; i2 <= n; ++i2)
+        {
+            if (arr[i] == arr[i2])
+            {
+                cout << "Нельзя задать одинаковые значения!!!";
+                return 0;
+            }   
+        }
+    } 
+    d = arr[2] - arr[1];
+    for (i = 2; i <= n; ++i)
+    {
+        if (arr[i] - arr[i-1] != d)
+        {
+            cout << 0;
+            return 0;
+        }
+    }
+    cout << "Разность прогрессии = " << d;
+}
+
+3:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, d;
+    cout << "Введите N: ";
+    cin >> n;
+    int a[n];
+    for (i = 1; i <= n; ++i)
+    {
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    d = 999999999;
+    for (i = 2; i >= n; i+=2)
+    {
+        if (a[i] < d)
+        {
+            d = a[i];
+        }
+        cout << "Минимальный четный элемент = " << d;
+    }
+}
+
+4:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, d;
+    cout << "Введите N: ";
+    cin >> n;
+    int a[n];
+    for (i = 1; i <= n; ++i)
+    {
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    for (i = 2; i < n; ++i)
+    {
+        if ((a[i-1] < a[i]) and (a[i+1] < a[i]))
+        {
+            d = i;
+        }
+    }
+    cout << "Номер последнего локального максимума = " << d;
+}
+
+5:
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, i2, d;
+    cout << "Введите N: ";
+    cin >> n;
+    int a[n];
+    for (i = 1; i <= n; ++i)
+    {
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    for (i = 1; i <= n - 1; ++i)
+    {
+        for (i2 = i+1; i2 <= n; ++i2)
+        {
+            if (a[i] == a[i2])
+            {
+                cout << "Первый номер - " << i << endl << "Второй номер - " << i2;
+                return 0;
+            }   
+        }
+        
+    }
+}
+
+
+
